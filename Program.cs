@@ -23,5 +23,14 @@ M = 4; N = 8. -> 30
 
 */
 
+int CountSum(int m, int n)
+{
+    if (m == n) return n;
+    return n + CountSum(m, n - 1);
+}
 
-
+Console.WriteLine("enter num1");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("enter num2");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"sum from {m} to {n} is {CountSum(m, n)}");
